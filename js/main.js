@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h2 class="summary-title">${title}</h2>
                     <hr class="summary-divider">
                     <p class="summary-description">${description}</p>
-                    <a href="${link}" class="button">Depart</a>
+                    <a href="${link}" class="button">Report</a>
                 </div>
             `;
         });
