@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const title = project.getAttribute("data-title");
             const description = project.getAttribute("data-desc");
             const imgSrc = project.getAttribute("data-img");
+            const link = project.getAttribute("data-link");
 
             //Inject the clean structured HTML into your summary panel
             summaryPanel.innerHTML = `
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h2 class="summary-title">${title}</h2>
                     <hr class="summary-divider">
                     <p class="summary-description">${description}</p>
+                    <a href="${link}" class="button">Depart</a>
                 </div>
             `;
         });
