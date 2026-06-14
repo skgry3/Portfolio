@@ -399,12 +399,215 @@ aside {
 
 .skill-card strong { color: var(--gold); }
 
-.projectDetails { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
-.coreFeatures { display: flex; flex-direction: column; gap: 12px; }
-.card { display: flex; gap: 12px; align-items: center; padding: 10px; border-radius: 14px; background: var(--panel-soft); border: 1px solid rgba(255,255,255,0.08); }
-.card img { width: 40%; min-width: 120px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
-.card article { width: 60%; color: var(--muted); }
-.card article h3 { color: var(--text); margin-top: 0; }
+.body.subPage.projectPage main {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+body.subPage.projectPage aside {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 18px;
+}
+
+.projectDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.projectDetails .title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(233, 242, 236, 0.98));
+    border: 1px solid rgba(78, 112, 92, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.projectDetails .title img {
+    width: 118px;
+    flex: 0 0 118px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 14px 28px rgba(39, 62, 50, 0.18);
+}
+
+.projectDetails .title h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.1;
+    color: var(--text);
+}
+
+.projectDetails .title .project-intro {
+    margin: 8px 0 0;
+    color: var(--muted);
+    max-width: 720px;
+    line-height: 1.5;
+}
+
+.gameplayVidContainer > div {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 18px;
+    align-items: stretch;
+    padding: 14px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(237, 244, 239, 0.98));
+    border: 1px solid rgba(78, 112, 92, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.gameplayVidContainer video {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #0d1411, #17251e);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.gameplayVidContainer p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.coreFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.coreFeatures .card {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 242, 0.98));
+    border: 1px solid rgba(78, 112, 92, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.coreFeatures .card:nth-child(even) {
+    grid-template-columns: 1.1fr 1fr;
+}
+
+.coreFeatures .card img {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 180px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.coreFeatures .card article {
+    width: 100%;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.coreFeatures .card article h1,
+.coreFeatures .card article h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+.coreFeatures > article {
+    padding: 16px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 242, 0.98));
+    border: 1px solid rgba(78, 112, 92, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.coreFeatures > article h2 {
+    margin-top: 0;
+    color: var(--text);
+    font-size: 1.35rem;
+}
+
+.coreFeatures > article p {
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.coreFeatures > section {
+    padding: 14px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 240, 0.98));
+    border: 1px solid rgba(78, 112, 92, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.coreFeatures > section > h1 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.coreFeatures > section > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.coreFeatures > section .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88px;
+    text-align: center;
+    padding: 12px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(236, 243, 239, 0.98));
+}
+
+.coreFeatures > section .card p {
+    margin: 0;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.download-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 240, 0.98));
+    border: 1px solid rgba(78, 112, 92, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.download-card h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.download-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.card article br {
+    display: block;
+    content: "";
+    margin-top: 0.35rem;
+}
 
 .button {
     display: inline-flex;
