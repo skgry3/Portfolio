@@ -337,10 +337,32 @@ aside {
 .contactMe a img { width: 28px; height: 28px; object-fit: contain; border-radius: 8px; }
 .contactMe a p { margin: 0; font-weight: 600; }
 
-.projectSelection { display: flex; gap: 16px; align-items: stretch; }
-.sidebar { flex: 0 0 0; }
+.projectSelection {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.sidebar { display: none; }
+
+.hero-card {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0;
+    max-width: none;
+    padding: 16px;
+    min-height: auto;
+}
+
+.projectContainer {
+    grid-column: 1;
+    grid-row: 2;
+}
+
 .projectSummery {
-    flex: 1;
+    grid-column: 2;
+    grid-row: 2;
     min-height: 72vh;
     padding: 16px;
     border-left: 4px solid var(--blade);
@@ -351,12 +373,21 @@ aside {
 .summary-divider { border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(78, 112, 92, 0.25), transparent); }
 .active-project { border-color: var(--forest) !important; background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 245, 240, 0.98)) !important; }
 
+.projectPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projectDropdownToggle {
+    display: none;
+}
+
 .projectContainer {
-    flex: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    padding: 6px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    padding: 4px;
     align-content: start;
 }
 
@@ -365,16 +396,16 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     gap: 8px;
-    min-height: 220px;
-    padding: 10px;
+    min-height: 186px;
+    padding: 8px;
     border-radius: 18px;
     border: 1px solid rgba(255,255,255,0.1);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 242, 0.98));
     transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
-.project img { width: 100%; height: 130px; object-fit: cover; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
-.project h1 { margin: 0; font-size: 1rem; color: var(--text); }
+.project img { width: 100%; height: 104px; object-fit: cover; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
+.project h1 { margin: 0; font-size: 0.98rem; color: var(--text); }
 .project:hover { transform: translateY(-2px); border-color: rgba(92, 154, 131, 0.45); box-shadow: 0 16px 30px rgba(39, 62, 50, 0.12); }
 
 .about-grid,
@@ -634,12 +665,98 @@ body.subPage.projectPage aside {
     aside { padding: 0 18px 24px; }
 }
 
+@media (max-width: 1100px) {
+    .projectSelection {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card,
+    .projectContainer,
+    .projectSummery {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .hero-card {
+        min-height: auto;
+    }
+
+    .projectContainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .project {
+        min-height: 170px;
+        padding: 8px;
+    }
+
+    .project img {
+        height: 92px;
+    }
+}
+
 @media (max-width: 860px) {
     .featuredProjects { grid-template-columns: 1fr; grid-template-areas: "img" "title" "text" "link"; }
     .featuredProjects > video,
     .featuredProjects > img { min-height: 180px; }
-    .projectSelection { flex-direction: column; }
-    .projectSummery { min-height: auto; }
+
+    .projectContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .projectSummery {
+        min-height: auto;
+        border-left: none;
+        border-top: 4px solid var(--blade);
+        padding-top: 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    .projectDropdownToggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border: 1px solid rgba(78, 112, 92, 0.18);
+        border-radius: 14px;
+        padding: 10px 12px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 242, 0.98));
+        color: var(--text);
+        font: inherit;
+        font-weight: 700;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+    }
+
+    .projectDropdownToggle strong {
+        color: var(--forest);
+        transition: transform 0.2s ease;
+    }
+
+    .projectPanel.is-open .projectDropdownToggle strong {
+        transform: rotate(180deg);
+    }
+
+    .projectContainer {
+        display: none;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .projectPanel.is-open .projectContainer {
+        display: grid;
+    }
+
+    .project {
+        min-height: auto;
+    }
+
+    .project img {
+        height: 110px;
+    }
 }
 
 @media (max-width: 640px) {

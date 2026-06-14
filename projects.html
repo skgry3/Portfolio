@@ -69,7 +69,7 @@
 
     <!-- content -->
     <main class="projectSelection">
-        <section class="hero-card" style="margin: 0 0 12px 0; width: 100%;">
+        <section class="hero-card">
             <p class="eyebrow">Hunting dossier</p>
             <h1>Project collection with a strong monster-hunter-inspired structure.</h1>
             <p>Select a card to open the details pane and explore the current work. The layout is designed to feel like a field report board with fast access to key project information.</p>
@@ -81,7 +81,13 @@
             </div>
         </section>
 
-        <section class="projectContainer">
+        <section class="projectPanel">
+            <button class="projectDropdownToggle" type="button" aria-expanded="false" aria-controls="projectGridMobile">
+                <span>Open project list</span>
+                <strong>▼</strong>
+            </button>
+
+            <div class="projectContainer" id="projectGridMobile">
             <div class="project" data-title="Idle 2D Physics Game" data-desc="An idle, simulation game where you gain money through shapes colliding. You can buy more shapes or upgrades in the shop to get more money." data-img="./images/physic2dSim.png" data-link="./physics2dSim.html">
                 <img src="./images/physic2dSimTitleCard.png" alt="">
                 <h1>Idle 2D Physics Game</h1>
@@ -107,6 +113,7 @@
                 <h1>Project name</h1>
             </div>
 
+            </div>
         </section>
 
         <section class="projectSummery" id="summeryPanel">

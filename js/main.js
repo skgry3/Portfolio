@@ -1,9 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projects = document.querySelectorAll(".project");
     const summaryPanel = document.getElementById("summeryPanel");
+    const projectPanel = document.querySelector(".projectPanel");
+    const projectToggle = document.querySelector(".projectDropdownToggle");
+
+    if (projectToggle && projectPanel) {
+        projectToggle.addEventListener("click", () => {
+            const isOpen = projectPanel.classList.toggle("is-open");
+            projectToggle.setAttribute("aria-expanded", String(isOpen));
+            projectToggle.querySelector("span").textContent = isOpen ? "Hide project list" : "Open project list";
+        });
+    }
 
     projects.forEach(project => {
         project.addEventListener("click", () => {
+            if (projectPanel && projectToggle) {
+                projectPanel.classList.remove("is-open");
+                projectToggle.setAttribute("aria-expanded", "false");
+                projectToggle.querySelector("span").textContent = "Open project list";
+            }
 
             //Remove active visual state from all projects, add to clicked one
             projects.forEach(p => p.classList.remove("active-project"));
