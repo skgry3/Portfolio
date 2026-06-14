@@ -42,4 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         });
     });
+
+    document.querySelectorAll('.tech-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-open');
+        });
+    });
 });

@@ -26,10 +26,11 @@
 
     <a href="./aboutMe.html" class="Profile">
 
-        <img src="./images/img_placeholder.png" alt="pfp" class="pfp">
+        <img src="./images/icons8-person-48.png" alt="pfp" class="pfp">
 
-        <p class="name">Skgry3</p>
-        <p class="about">Yes</p>
+        <p class="name">Joel Chew</p>
+        <p class="about">Aspiring Game Developer</p>
+        <span class="profile-badge">IGN: Skgry3</span>
 
     </a>
 
@@ -37,7 +38,7 @@
     <header>
         <section class="home">
             <a href="./index.html">
-                <img src="./images/img_placeholder.png" alt="">
+                <img src="./images/icons8-home-128.png" alt="">
             </a>
         </section>
         <section class="HeaderTabsContainer">
@@ -138,11 +139,15 @@
                             Buy Upgrades and unlock more
                         </p>
                     </article>
-                    <img src="./images/physic2dSim.png" alt="">
+                    <video class="media" controls autoplay>
+                        <source src="./vids/upgradeTreeClip.mp4">
+                    </video>
                 </div>
 
                 <div class="card">
-                    <img src="./images/physic2dSim.png" alt="">
+                    <video class="media" controls autoplay>
+                        <source src="./vids/movementClip.mp4">
+                    </video>
                     <article>
                         <h1>Controls</h1>
 
@@ -158,39 +163,57 @@
 
                 <article>
                     <h2>Physics-based idle game where shapes generate money by colliding.</h2>
+                    <p>Built on a pre-existing C++ framework, with all gameplay systems — collision detection, economy,
+                        and upgrades — written from scratch.</p>
 
-                    <p>Made with: </p>
-                    <p>C++</p>
+                    <div class="chip-row">
+                        <span class="chip">C++</span>
+                    </div>
 
-                    <p>Solo Project build on pre-existing framework</p>
+                    <p class="step">Solo Project</p>
                 </article>
 
                 <section>
                     <h1>Technical Highlights</h1>
 
                     <div>
-                        <div class="card">
-                            <p>
-                                Collision System
-                            </p>
+                        <div class="card tech-card">
+                            <p>Collision System</p>
+                            <div class="tech-detail">
+                                <p>Detects and resolves overlaps between all shape pairs each frame, calculating
+                                    penetration depth and push-apart vectors to keep shapes from passing through each
+                                    other.</p>
+                            </div>
                         </div>
 
-                        <div class="card">
-                            <p>
-                                Separating Axis Theorem
-                            </p>
+                        <div class="card tech-card">
+                            <p>Separating Axis Theorem (SAT)</p>
+                            <div class="tech-detail">
+                                <p>SAT works by projecting two shapes onto multiple axes and checking for overlap on
+                                    each one. If any axis shows a gap, the shapes aren't colliding. If all axes overlap,
+                                    a collision is confirmed and the shortest push-out vector is used to separate them.
+                                    This makes it accurate for any convex polygon, not just circles or boxes.</p>
+                            </div>
                         </div>
 
-                        <div class="card">
-                            <p>
-                                Convex polygon support
-                            </p>
+                        <div class="card tech-card">
+                            <p>Convex polygon support</p>
+                            <div class="tech-detail">
+                                <p>Rather than hardcoding behaviour for specific shapes, the collision system works on
+                                    any convex polygon by reading its vertices. This means triangles, squares, and
+                                    pentagons all run through the same detection logic — making it easy to add new
+                                    shapes in the future without rewriting the collision code.</p>
+                            </div>
                         </div>
 
-                        <div class="card">
-                            <p>
-                                Mixed shape collision pairs
-                            </p>
+                        <div class="card tech-card">
+                            <p>Mixed shape collision pairs</p>
+                            <div class="tech-detail">
+                                <p>The engine handles every possible pairing between the three shape types —
+                                    Triangle↔Triangle, Square↔Square, Pentagon↔Pentagon, and all cross-type pairs. Each
+                                    collision is detected and resolved correctly regardless of which two shapes meet, so
+                                    the chaos on screen always behaves physically.</p>
+                            </div>
                         </div>
 
                     </div>
