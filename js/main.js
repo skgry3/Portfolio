@@ -29,17 +29,35 @@ document.addEventListener("DOMContentLoaded", () => {
             const description = project.getAttribute("data-desc");
             const imgSrc = project.getAttribute("data-img");
             const link = project.getAttribute("data-link");
+            const ongoing = project.dataset.ongoing === "true";
+            const contributions = project.dataset.contributions || "";
+            const teammates = project.dataset.teammates || "";
 
             //Inject the clean structured HTML into your summary panel
             summaryPanel.innerHTML = `
                 <div class="summary-content">
                     <img src="${imgSrc}" alt="${title} Preview" class="summary-image">
                     <h2 class="summary-title">${title}</h2>
+                    ${ongoing ? `<span class="summary-badge">In Development</span>` : ""}
                     <hr class="summary-divider">
                     <p class="summary-description">${description}</p>
-                    <a href="${link}" class="button">Report</a>
-                </div>
-            `;
+                    ${contributions ? `
+                        <div>
+                            <p class="step">My Contributions</p>
+                            <div class="chip-row">
+                                ${contributions.split(",").map(c => `<span class="chip chip-mine">${c.trim()}</span>`).join("")}
+                            </div>
+                        </div>` : ""}
+                    ${teammates ? `
+                        <div>
+                            <p class="step">Teammates</p>
+                            <div class="chip-row">
+                                ${teammates.split(",").map(t => `<span class="chip chip-team">${t.trim()}</span>`).join("")}
+                            </div>
+                        </div>` : ""}
+        <a href="${link}" class="button">View Project</a>
+    </div>
+`;
         });
     });
 

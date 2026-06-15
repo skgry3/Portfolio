@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the website title -->
+    <title>Projects</title>
+
+    <!-- changing of website icon -->
+    <link rel="icon" type="image/x-icon" href="img/logo_.png">
+
+    <!-- link to external css file under css folder -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- link to external js file under js folder -->
+    <script src="./js/main.js" defer></script>
+
+</head>
+
+
+<body class="subPage projectPage">
+
+    <a href="./aboutMe.html" class="Profile">
+        <img src="./images/icons8-person-48.png" alt="pfp" class="pfp">
+        <p class="name">Joel Chew</p>
+        <p class="about">Aspiring Game Developer</p>
+        <span class="profile-badge">IGN: Skgry3</span>
+    </a>
+
+    <header>
+        <section class="home">
+            <a href="./index.html">
+                <img src="./images/icons8-home-128.png" alt="">
+            </a>
+        </section>
+        <section class="HeaderTabsContainer">
+            <ul>
+                <a href="./projects.html" class="HeaderTab">
+                    <li><p>Projects</p></li>
+                </a>
+                <a href="./skills.html" class="HeaderTab">
+                    <li><p>Skills</p></li>
+                </a>
+                <a href="" class="HeaderTab">
+                    <li><p>More</p></li>
+                </a>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <div class="projectDetails">
+
+            <div class="title">
+                <img src="./images/img_placeholder.png" alt="">
+                <div>
+                    <p class="eyebrow">Ongoing Project — Early Prototype</p>
+                    <h1>3D Action Tower Defense</h1>
+                    <p class="project-intro">
+                        An early prototype of a 3D action tower defense where players fight alongside
+                        their defenses, possess towers for high-impact plays, and combo attacks with
+                        structures to repel escalating enemy waves. Core systems are in place and
+                        actively being expanded.
+                    </p>
+                </div>
+            </div>
+
+            <section class="coreFeatures">
+
+                <div class="card">
+                    <img src="./images/img_placeholder.png" alt="">
+                    <article>
+                        <h1>Combat & Movement ✓</h1>
+                        <p>
+                            Player movement and core combat are up and running. The player can
+                            reposition freely, dodge incoming attacks, and engage enemies with
+                            a working weapon set. Attack variety — light, heavy, and ranged options
+                            — is currently being expanded and refined.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="card">
+                    <article>
+                        <h1>GOAP AI System ✓</h1>
+                        <p>
+                            Both enemies and towers run on a Goal-Oriented Action Planning (GOAP)
+                            system — an AI architecture where agents dynamically plan sequences of
+                            actions to reach a goal, rather than following fixed scripts. Currently
+                            implemented with foundational behaviours, with more complex actions
+                            planned as the prototype develops.
+                        </p>
+                    </article>
+                    <img src="./images/img_placeholder.png" alt="">
+                </div>
+
+                <div class="card">
+                    <img src="./images/img_placeholder.png" alt="">
+                    <article>
+                        <h1>Tower Possession <span class="step">Planned</span></h1>
+                        <p>
+                            Players will be able to step into any tower and take direct control,
+                            gaining boosted stats and a powerful ability at the cost of leaving
+                            their character exposed. Knowing when to possess and when to stay
+                            mobile will be a core part of high-level play.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="card">
+                    <article>
+                        <h1>Combat–Tower Combo System <span class="step">Planned</span></h1>
+                        <p>
+                            Player attacks and tower attacks will amplify each other through a
+                            shared debuff and combo system. Hitting a tower-marked enemy — or
+                            baiting one into a tower's fire — will trigger bonus damage and
+                            visual feedback, rewarding coordinated play between the player and
+                            their defenses.
+                        </p>
+                    </article>
+                    <img src="./images/img_placeholder.png" alt="">
+                </div>
+
+                <article>
+                    <h2>A tower defense where the player is the biggest variable on the battlefield.</h2>
+                    <p>
+                        Early prototype built solo in Unity. Core movement, combat, and GOAP-driven
+                        AI are functional. Tower placement, possession, upgrade progression, and the
+                        combo system are actively in development.
+                    </p>
+
+                    <div class="chip-row">
+                        <span class="chip">Unity</span>
+                        <span class="chip">C#</span>
+                        <span class="chip">3D</span>
+                        <span class="chip">GOAP AI</span>
+                        <span class="chip">In Development</span>
+                    </div>
+
+                    <p class="step">Solo Project</p>
+                </article>
+
+                <section>
+                    <h1>Technical Highlights</h1>
+
+                    <div>
+                        <div class="card tech-card">
+                            <p>GOAP AI Architecture</p>
+                            <div class="tech-detail">
+                                <p>
+                                    Goal-Oriented Action Planning lets both enemies and towers decide
+                                    their own behaviour at runtime by evaluating a set of goals and
+                                    planning the cheapest sequence of actions to achieve them. Unlike
+                                    behaviour trees or state machines, GOAP agents can adapt to changing
+                                    conditions without needing manually authored transitions — making
+                                    it easier to add new actions and scale complexity as the prototype grows.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card tech-card">
+                            <p>Player Movement & Combat</p>
+                            <div class="tech-detail">
+                                <p>
+                                    The player controller handles 3D movement, dodge rolling, and
+                                    weapon switching. Weapons are fully implemented with their own
+                                    stats and behaviours. Attack logic — including light, heavy, and
+                                    ranged variants — is currently being built out, with hit detection
+                                    and animation integration in progress.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card tech-card">
+                            <p>Tower Possession System</p>
+                            <div class="tech-detail">
+                                <p>
+                                    Planned feature. When implemented, possession will transfer input
+                                    control from the player character to a selected tower, switching
+                                    it from autonomous GOAP-driven firing to direct player aim. A stat
+                                    multiplier and unique ability will activate on entry, with the
+                                    player character left vulnerable until possession ends.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card tech-card">
+                            <p>Combat–Tower Combo System</p>
+                            <div class="tech-detail">
+                                <p>
+                                    Planned feature. A shared status system will track debuffs from
+                                    both the player and towers. Hitting a debuffed enemy with the
+                                    other source triggers a combo multiplier, applying bonus damage
+                                    and a visual effect. Each tower type will define its own debuff
+                                    and combo behaviour, making the system extensible as new towers
+                                    are added.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </main>
+
+    <aside>
+        <section class="contactMe">
+            <h1>Contact Me @: </h1>
+
+            <a href="https://www.linkedin.com/in/joel-chew-1ab3a2368" target="_blank" rel="noopener noreferrer">
+                <img src="./images/LI-In-Bug.png" alt="LinkedIn logo">
+                <p>LinkedIn</p>
+            </a>
+
+            <a href="mailto:joelskgry@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icons8-gmail-100.png" alt="Gmail logo">
+                <p>Gmail</p>
+            </a>
+        </section>
+    </aside>
+
+    <footer></footer>
+
+</body>
+
+</html>

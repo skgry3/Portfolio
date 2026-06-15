@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the website title -->
+    <title>Projects</title>
+
+    <!-- changing of website icon -->
+    <link rel="icon" type="image/x-icon" href="img/logo_.png">
+
+    <!-- link to external css file under css folder -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- link to external js file under js folder -->
+    <script src="./js/main.js" defer></script>
+
+</head>
+
+
+<body class="subPage projectPage">
+
+    <a href="./aboutMe.html" class="Profile">
+        <img src="./images/icons8-person-48.png" alt="pfp" class="pfp">
+        <p class="name">Joel Chew</p>
+        <p class="about">Aspiring Game Developer</p>
+        <span class="profile-badge">IGN: Skgry3</span>
+    </a>
+
+    <header>
+        <section class="home">
+            <a href="./index.html">
+                <img src="./images/icons8-home-128.png" alt="">
+            </a>
+        </section>
+        <section class="HeaderTabsContainer">
+            <ul>
+                <a href="./projects.html" class="HeaderTab">
+                    <li>
+                        <p>Projects</p>
+                    </li>
+                </a>
+                <a href="./skills.html" class="HeaderTab">
+                    <li>
+                        <p>Skills</p>
+                    </li>
+                </a>
+                <a href="" class="HeaderTab">
+                    <li>
+                        <p>More</p>
+                    </li>
+                </a>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <div class="projectDetails">
+
+            <div class="title">
+                <img src="./images/wiu3TitleCard.png" alt="">
+                <div>
+                    <p class="eyebrow">School Group Project — 2 Weeks</p>
+                    <h1>Echoes of Singapore</h1>
+                    <p class="project-intro">
+                        A 2D side-scrolling platformer where a Singaporean man is thrown back in time,
+                        forced to fight through pivotal moments in Singapore's history — from Sang Nila
+                        Utama's landing to the Hock Lee Bus Riots — before finding his way home.
+                    </p>
+                </div>
+            </div>
+
+            <section class="coreFeatures">
+
+                <div class="contribution-legend">
+                    <span class="legend-mine">● My Work</span>
+                    <span class="legend-team">● Teammate</span>
+                    <span class="legend-collab">● Collaborated</span>
+                </div>
+
+                <div class="card">
+                    <img src="./images/img_placeholder.png" alt="">
+                    <article>
+                        <h1>Movement System <span class="tag-mine">Me</span> </h1>
+                        <p>
+                            Full platformer movement with walk, run, dash, jump, double jump,
+                            wall jump, and wall slide. Built to feel responsive across all of
+                            Singapore's historical levels, each with their own terrain and layout.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="card">
+                    <article>
+                        <h1>Combat System <span class="tag-collab">Collab</span> </h1>
+                        <p>
+                            Players can chain up to 4 consecutive melee attacks, each with a
+                            distinct animation and hit. A ranged shoot option built by a teammate
+                            adds flexibility for dealing with enemies at a distance. Enemies fight
+                            back with either close-range attacks or projectiles depending on their type.
+                        </p>
+                    </article>
+                    <img src="./images/img_placeholder.png" alt="">
+                </div>
+
+                <div class="card">
+                    <img src="./images/img_placeholder.png" alt="">
+                    <article>
+                        <h1>Story & Cutscenes <span class="tag-team">Teammates</span> </h1>
+                        <p>
+                            The game tells the story of Zhe Hao — a modern Singaporean man
+                            accidentally sent back in time. Cutscenes and a dialogue system
+                            guide the player through each era, giving historical context and
+                            keeping the narrative moving between combat sections.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="card">
+                    <article>
+                        <h1>Shop & Upgrade System <span class="tag-collab">Collab</span> </h1>
+                        <p>
+                            Between levels, players spend resources at a shop to buy healing
+                            items and upgrades. An inventory system with 7 hotbar slots lets
+                            players manage and use items mid-run, while the upgrade UI gives
+                            stat boosts that carry through to later eras.
+                        </p>
+                    </article>
+                    <img src="./images/img_placeholder.png" alt="">
+                </div>
+
+                <article>
+                    <h2>A 2-week school project built by a team of 4 — exploring Singapore's history through a 2D action
+                        platformer.</h2>
+                    <p>
+                        Submitted and completed. The game covers five historical periods across
+                        Singapore's past, each with unique enemies and context. Built in two weeks
+                        with a focus on getting core systems functional — some rough edges remain
+                        but all major systems are in and working.
+                    </p>
+
+                    <div class="chip-row">
+                        <span class="chip">Unity</span>
+                        <span class="chip">C#</span>
+                        <span class="chip">2D Platformer</span>
+                        <span class="chip">Group Project</span>
+                        <span class="chip">Completed</span>
+                    </div>
+
+                    <p class="step">Group Project — Team of 4</p>
+                </article>
+
+                <section>
+                    <h1>Technical Highlights</h1>
+
+                    <div>
+                        <div class="card tech-card">
+                            <p>Movement System</p>
+                            <div class="tech-detail">
+                                <p>
+                                    Built and owned by me. Handles walk, run, dash, jump, double jump,
+                                    wall jump, and wall slide — all driven by a single player controller.
+                                    Each movement state transitions cleanly into the next, keeping the
+                                    feel tight across varied level layouts and terrain types.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card tech-card">
+                            <p>Melee Combat & Health Interface</p>
+                            <div class="tech-detail">
+                                <p>
+                                    Built and owned by me. The 4-hit melee combo is handled by a combat
+                                    controller that tracks combo state and applies damage on hit. Player
+                                    and enemy health both implement a shared interface, keeping health
+                                    logic consistent and making it straightforward to extend to new enemy
+                                    types. Ranged combat was handled by a teammate building on the same
+                                    interface.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card tech-card">
+                            <p>Upgrade System</p>
+                            <div class="tech-detail">
+                                <p>
+                                    Built and owned by me. Players access an upgrade UI mid-run to
+                                    spend resources on stat boosts. Upgrades persist across scene
+                                    transitions, feeding into the same health and combat interfaces
+                                    used by the rest of the game's systems.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card tech-card">
+                            <p>Enemy FSM & Rioter Enemy</p>
+                            <div class="tech-detail">
+                                <p>
+                                    The base enemy class and Finite State Machine architecture were
+                                    built by a teammate. I implemented the Rioter enemy on top of
+                                    that foundation — a close-range attacker inspired by the Hock Lee
+                                    Bus Riots, with its own patrol, chase, and attack states wired
+                                    into the shared FSM.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </main>
+
+    <aside>
+        <section class="contactMe">
+            <h1>Contact Me @: </h1>
+
+            <a href="https://www.linkedin.com/in/joel-chew-1ab3a2368" target="_blank" rel="noopener noreferrer">
+                <img src="./images/LI-In-Bug.png" alt="LinkedIn logo">
+                <p>LinkedIn</p>
+            </a>
+
+            <a href="mailto:joelskgry@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icons8-gmail-100.png" alt="Gmail logo">
+                <p>Gmail</p>
+            </a>
+        </section>
+    </aside>
+
+    <footer></footer>
+
+</body>
+
+</html>
